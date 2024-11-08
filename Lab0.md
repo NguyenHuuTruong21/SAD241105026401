@@ -1,7 +1,7 @@
 /* Tài Liệu MarkDown */ <br>
 ![Diagram](http://www.plantuml.com/plantuml/png/encoded-diagram-text) 
 
-1. Diagram (class)
+1. Diagram (class) <br>
 ![Phantnet](https://www.planttext.com/api/plantuml/png/D8un3i8m34Ltdy8Z3DoXg0mWiJD7ZLLPJMmKEtH0d8o18t45WWBRUyFN--_dQp0FnMjE0BQmO54Z06TFX6CAPcIuwuG73dC96G2cxYkbn3BZ7H3n98uNbgYhVVMc7F6iqxBPmkE_s5zRB9FupuzQMwxpg3bNQV619BP37m000F__0m00)
 
 2.Diagram (uses case) <br>
