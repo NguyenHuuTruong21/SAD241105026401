@@ -34,3 +34,5 @@ Lớp phân tích cho ca sử dụng "Select Payment"
 + PaymentRepository: Truy cập dữ liệu để lấy thông tin thanh toán từ cơ sở dữ liệu.
 
 # Biểu đồ sequence
+
+![Phantnet](https://www.planttext.com/api/plantuml/png/T9513i8W44Ntd6AMkl02B4mJFO3HU809Z4f2WS1eqhEvy4XUGPhIqAIuvV_t_ypmVN-wn1ZvsLk1Yds4Qw8eGduooWHq32SSUd9yy8wZjxQjNYY-ZAAMTARWaydHWn1ZEC1klmwLaCYIuY9ijc9bMN2bJiATPk98ZCQc2XRFWggJIBWHgyUC8cFbggjL68cVqO7EoF-YvLe529C2UXgplTru7WdQf61nM24TEPt_wGS00F__0m00)
