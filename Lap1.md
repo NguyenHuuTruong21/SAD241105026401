@@ -1,4 +1,4 @@
-1. Phân tích kiến trúc
+# 1. Phân tích kiến trúc
 Đề xuất kiến trúc
 Kiến trúc hệ thống:
 
@@ -14,6 +14,23 @@ Kiến trúc hệ thống:
 + Presentation Layer: Cung cấp giao diện người dùng, cho phép người dùng nhập dữ liệu và nhận thông tin.
 + Business Logic Layer: Chứa các quy tắc nghiệp vụ như tính toán lương, quản lý thời gian làm việc.
 + Data Access Layer: Quản lý kết nối và tương tác với cơ sở dữ liệu, thực hiện các truy vấn SQL.
+  
 # Biểu đồ package mô tả kiến trúc
 
-![Phantnet](https://www.planttext.com/api/plantuml/png/RD3D2i8m30VmUvuYB-31pzCOWmt1YuWNpt4DOwnhfSrEufDvy95y1TiDSK9F-KD-2I7lvwlmGaw6NWFuhZNeh6S0QKKpdgZkg66F2omrUOzLIusZ7W1kKmkFLZ5cMInvZdT0h4TviQvZjuJ7Zvwv5ZADZZxcX5_D_TvgnIxWAIJu-e-7m-BgiIRmPeuFHjWPbk1BRGULyDkvhqZeIZxk_yR4o2wE56nKUES7003__mC0)
+![Phantnet](https://www.planttext.com/api/plantuml/png/b5BB2i8m4BptAnRl_eBukWWLApukqiEQhYNORcIJ7aJyCWz-ahzWJ0LHW-0UPsPdCc5lbslVEXJNr5LoGBN7ag2J2LbYXquRXXIF91qu9U1dix8a01Ds93jKb4CBJ_ZGE5XZfOkmbIVdvEKtRAnciXPIKshruPZXKKnLGIP6UOtcCc-9fQv9eHGmHVOsjN_Havdzo1gZGnWe5UBUWXxC5Yt1o32JQbS3ivYdC6z8DDbWzjsosujr_8Q2CDOe1WPnj6KK_TyxsZYA1ldRD_I92tyKTm000F__0m00)
+
+
+# 2. Cơ chế phân tích
+Đề xuất các cơ chế cần giải quyết
++ Quản lý giao dịch thanh toán: Cần có cơ chế để xử lý và ghi nhận các giao dịch thanh toán, đảm bảo tính chính xác và kịp thời.
++ Quản lý thời gian làm việc: Cần có cơ chế để ghi nhận thời gian làm việc của nhân viên, bao gồm việc vào ra, nghỉ phép, và các trường hợp đặc biệt khác.
++ Báo cáo tài chính: Cần có cơ chế để tạo báo cáo tài chính, giúp người quản lý theo dõi chi phí và thu nhập.
++ Bảo mật và phân quyền: Cần có cơ chế bảo mật để đảm bảo rằng chỉ những người có quyền hạn mới có thể truy cập và thực hiện các thao tác nhất định trong hệ thống.
+
+# 3. Phân tích ca sử dụng "Select Payment"
+Lớp phân tích cho ca sử dụng "Select Payment"
++ PaymentController: Quản lý các yêu cầu thanh toán từ người dùng.
++ PaymentService: Chứa logic nghiệp vụ để xử lý thanh toán.
++ PaymentRepository: Truy cập dữ liệu để lấy thông tin thanh toán từ cơ sở dữ liệu.
+
+# Biểu đồ sequence
