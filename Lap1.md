@@ -57,4 +57,26 @@ Xác định các lớp phân tích:
 
 ![Phantnet](https://www.planttext.com/api/plantuml/png/UhzxlsjkGKv-PMggWgwTGaXcRcfoOb6ARs9UOdfgaPL2KMfXQMfn2Kmyj20biIHLGvCBJI6oNXSdkEvIi7AO198sk1fibW80003__mC0)
 
+# Nhiệm vụ của từng lớp:
 
++ TimecardManager: Quản lý việc cập nhật và truy xuất thông tin thời gian công.
++ Timecard: Lưu trữ và xử lý thông tin thời gian công.
++ Employee: Cung cấp thông tin cần thiết cho việc cập nhật thời gian công.
+
+# Biểu đồ lớp mô tả lớp phân tích:
+
+![Phantnet](https://www.planttext.com/api/plantuml/png/Z9B1IWCn48Rl-nHphA0li1JfeOA2xKN5yxWPji4akqucGX6Vh8S-agzWijsaRcd1FOJbd_-VV3FaPxTVU46MO4rLDGQzXplRcsvB15yLnEy6Q1GUbZKy2MlNZWM7bauaqPOQPFMelTIGpldpADqE5e2M94kpgmiULAfuOf_y7-sVdLRLTsRDXHKwR8aByZymc3u2-OBoqYiKciLvylpNSERcGrPftnlS7Z97qZ_XYwG5CKLFbhVf0llNZjz9rQ2TZ7ApGMvf7UmRyIG140Q20Z0q6A9JthZo9GbguzF69nrIAGr-Hhy_ugHo0ehZBCYf-5f-0G00__y30000)
+
+# 5. Hợp nhất kết quả phân tích
+Sau khi phân tích hai ca sử dụng "Select Payment" và "Maintain Timecard", chúng ta có thể hợp nhất kết quả để tạo ra một cái nhìn tổng thể về hệ thống "Payroll System".
+
+# Kết quả hợp nhất:
+
++ Kiến trúc tổng thể: Hệ thống bao gồm ba lớp chính: Client Layer, Business Services Layer, và Database Layer. Mỗi lớp có nhiệm vụ riêng và tương tác với nhau để cung cấp chức năng cho người dùng.
+
++ Cơ chế chính: Các cơ chế như quản lý nhân viên, quản lý thời gian công, tính toán lương và xử lý thanh toán là rất quan trọng để đảm bảo hệ thống hoạt động hiệu quả.
+
+# Ca sử dụng:
+
++ Select Payment: Xác định cách thức thanh toán cho nhân viên, với các lớp như PaymentManager, Employee, và Payment đảm nhận các chức năng khác nhau.
++ Maintain Timecard: Xác định cách thức cập nhật và quản lý thời gian công của nhân viên, với các lớp như TimecardManager, Employee, và Timecard.
