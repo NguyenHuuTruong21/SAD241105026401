@@ -36,3 +36,25 @@ Lớp phân tích cho ca sử dụng "Select Payment"
 # Biểu đồ sequence
 
 ![Phantnet](https://www.planttext.com/api/plantuml/png/T9513i8W44Ntd6AMkl02B4mJFO3HU809Z4f2WS1eqhEvy4XUGPhIqAIuvV_t_ypmVN-wn1ZvsLk1Yds4Qw8eGduooWHq32SSUd9yy8wZjxQjNYY-ZAAMTARWaydHWn1ZEC1klmwLaCYIuY9ijc9bMN2bJiATPk98ZCQc2XRFWggJIBWHgyUC8cFbggjL68cVqO7EoF-YvLe529C2UXgplTru7WdQf61nM24TEPt_wGS00F__0m00)
+
+# Nhiệm vụ của từng lớp phân tích:
++ PaymentManager: Xử lý yêu cầu thanh toán và tương tác với cơ sở dữ liệu.
++ Employee: Đại diện cho người dùng yêu cầu thanh toán.
++ PayrollDBManager: Cung cấp dữ liệu thanh toán từ cơ sở dữ liệu.
+  
+# Biểu đồ lớp mô tả lớp phân tích:
+
+![Phantnet](https://www.planttext.com/api/plantuml/png/UhzxlqDnIM9HIMbk3bToJc9niK90OcLkQbw9Rs9UOdfgaK8rbm8O5AKMbgOMbq1bDJIXmYcPnGKvYPK8uLekg3ckkGKv-PMfgN0JqbDBN59B4ZDpYf6L0NKMvUVak3YXMmXK3ZKLHHUQytHrxH0sMIcK5gSMOrE2OGjKgKDgNWhGwm00003__mC0)
+
+# 4. Phân tích ca sử dụng Maintain Timecard
+Xác định các lớp phân tích:
+
++ TimecardManager: Quản lý các hoạt động liên quan đến thời gian làm việc.
++ Employee: Đại diện cho nhân viên trong hệ thống.
++ TimecardDBManager: Quản lý truy cập đến cơ sở dữ liệu liên quan đến thời gian làm việc.
+
+# Biểu đồ sequence:
+
+![Phantnet](https://www.planttext.com/api/plantuml/png/UhzxlsjkGKv-PMggWgwTGaXcRcfoOb6ARs9UOdfgaPL2KMfXQMfn2Kmyj20biIHLGvCBJI6oNXSdkEvIi7AO198sk1fibW80003__mC0)
+
+
