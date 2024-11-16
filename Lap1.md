@@ -65,7 +65,7 @@ Xác định các lớp phân tích:
 
 # Biểu đồ lớp mô tả lớp phân tích:
 
-![Phantnet](https://www.planttext.com/api/plantuml/png/Z9B1IWCn48Rl-nHphA0li1JfeOA2xKN5yxWPji4akqucGX6Vh8S-agzWijsaRcd1FOJbd_-VV3FaPxTVU46MO4rLDGQzXplRcsvB15yLnEy6Q1GUbZKy2MlNZWM7bauaqPOQPFMelTIGpldpADqE5e2M94kpgmiULAfuOf_y7-sVdLRLTsRDXHKwR8aByZymc3u2-OBoqYiKciLvylpNSERcGrPftnlS7Z97qZ_XYwG5CKLFbhVf0llNZjz9rQ2TZ7ApGMvf7UmRyIG140Q20Z0q6A9JthZo9GbguzF69nrIAGr-Hhy_ugHo0ehZBCYf-5f-0G00__y30000)
+![Phantnet](https://www.planttext.com/api/plantuml/png/Z9BDIiGm58NtVOgx745Ve8ZCOWG5HmGLrzVcqWdcf-P76CGdS-4Z-GecdIJziGFJHIddddFvSfhVxv-rTMYSbwAg6e7MmhNiXDuJmMS5uRa0IiBjfeP7PxXgqq2Xf9dakAG63RlZrjKGtvTFIRhgBG0jkIojpevuaB7Y2NloTx1_QCwghuJwe0Llw3ydB83EjJ4fd89wp3HXXH4i5DfSRHvjKM5BfZHyGck6tZtPWlFSCNIq2lNdttKE2qKTiepRJk3-a1bWH-6Xs1bfGOpHMOCxxOrzqUQDM0rSkIGtEpGjtNlvIcQI0F0zGG7e5_JHAM-eVKCEkR3nWamsn54y-89-C-34SGGAnrcJOk5o_m400F__0m00)
 
 # 5. Hợp nhất kết quả phân tích
 Sau khi phân tích hai ca sử dụng "Select Payment" và "Maintain Timecard", chúng ta có thể hợp nhất kết quả để tạo ra một cái nhìn tổng thể về hệ thống "Payroll System".
