@@ -10,7 +10,7 @@ Transaction: Represents a single bank transaction.
 Expense: Represents an expense with a description and amount.
 TransactionParser: Responsible for parsing the CSV file and converting it into a list of Transaction objects.
 ReportGenerator: Responsible for generating reports and summaries based on the list of transactions.
-This separation ensures that changes in one class (e.g., how transactions are parsed) do not affect others (e.g., how reports are generated).
+This separation ensures that changes in one class (e.g., how transactions are parsed) do not affect others.
 
 # Cohesion:
 The classes are designed to be cohesive, meaning that the methods and attributes within each class are closely related to the class's purpose.
