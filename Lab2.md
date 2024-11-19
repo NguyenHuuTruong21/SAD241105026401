@@ -17,7 +17,7 @@ The classes are designed to be cohesive, meaning that the methods and attributes
 For example, TransactionParser has methods that are solely related to parsing transactions, while ReportGenerator focuses on generating reports based on transactions.
 High cohesion within classes improves maintainability and readability, as each class has a clear and focused role.
 
- #Coupling:
+# Coupling:
 The design aims for low coupling between classes, meaning that they are independent and changes in one class have minimal impact on others.
 BankStatementAnalyzer interacts with TransactionParser and ReportGenerator, but these components can be modified or replaced without affecting the core functionality of the analyzer.
 For example, if a different format of bank statements is introduced, only the TransactionParser class would need to change, while the analysis and reporting functionalities remain intact.
