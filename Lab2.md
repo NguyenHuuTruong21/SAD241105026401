@@ -3,7 +3,7 @@
 
 # Explanation of SRP, Cohesion, and Coupling
 
-#Single Responsibility Principle (SRP):
+# Single Responsibility Principle (SRP):
 Each class in the design has a single responsibility. For instance:
 BankStatementAnalyzer: Responsible for analyzing bank statements and providing insights.
 Transaction: Represents a single bank transaction.
