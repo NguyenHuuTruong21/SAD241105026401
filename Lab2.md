@@ -135,46 +135,59 @@ public class BankStatementAnalyzer {
 SRP yêu cầu mỗi lớp chỉ thực hiện một trách nhiệm duy nhất. Trong thiết kế này:
 
 +Transaction:
-  +Đóng vai trò là mô hình dữ liệu, chỉ đại diện cho một giao dịch (các thuộc tính: ngày, số tiền, mô tả).
+
+      +Đóng vai trò là mô hình dữ liệu, chỉ đại diện cho một giao dịch (các thuộc tính: ngày, số tiền, mô tả).
+  
 +TransactionParser:
-  +Chỉ chịu trách nhiệm đọc và phân tích dữ liệu từ file CSV để tạo ra danh sách các đối tượng Transaction.
+
+      +Chỉ chịu trách nhiệm đọc và phân tích dữ liệu từ file CSV để tạo ra danh sách các đối tượng Transaction.
+  
 +TransactionAnalyzer:
+
 +Chỉ tập trung vào logic phân tích, bao gồm:
-  +Tính tổng thu nhập hoặc chi tiêu.
-  +Tìm giao dịch lớn nhất.
-  +Lọc giao dịch dựa trên từ khóa.
+
+      +Tính tổng thu nhập hoặc chi tiêu.
+      +Tìm giao dịch lớn nhất.
+      +Lọc giao dịch dựa trên từ khóa.
+  
 +TransactionReport:
-  +Chịu trách nhiệm duy nhất là hiển thị dữ liệu giao dịch, đảm bảo code không bị rối loạn bởi logic phân tích.
-->Cách áp dụng SRP: Mỗi lớp trong chương trình có nhiệm vụ rõ ràng và độc lập, giúp dễ dàng bảo trì, kiểm tra và mở rộng.
+
+      +Chịu trách nhiệm duy nhất là hiển thị dữ liệu giao dịch, đảm bảo code không bị rối loạn bởi logic phân tích.
+  
+    -> Cách áp dụng SRP: Mỗi lớp trong chương trình có nhiệm vụ rõ ràng và độc lập, giúp dễ dàng bảo trì, kiểm tra và mở rộng.
 
 
 2. Cohesion
 Tính gắn kết yêu cầu các thành phần trong một lớp phải tập trung thực hiện nhiệm vụ cụ thể và liên quan chặt chẽ.
 
-Tăng tính gắn kết:
++Tăng tính gắn kết:
 
-Các lớp như TransactionParser, TransactionAnalyzer, và TransactionReport chỉ chứa các phương thức liên quan trực tiếp đến nhiệm vụ của chúng.
-Ví dụ:
-TransactionParser chỉ liên quan đến việc đọc file và chuyển đổi dữ liệu thành danh sách giao dịch.
-TransactionAnalyzer chứa tất cả logic tính toán và phân tích.
-TransactionReport chỉ in kết quả, không can thiệp vào logic phân tích hoặc thao tác dữ liệu.
-Lợi ích:
+    +Các lớp như TransactionParser, TransactionAnalyzer, và TransactionReport chỉ chứa các phương thức liên quan trực tiếp đến nhiệm vụ của chúng.
+    Ví dụ:
+    TransactionParser chỉ liên quan đến việc đọc file và chuyển đổi dữ liệu thành danh sách giao dịch.
+    TransactionAnalyzer chứa tất cả logic tính toán và phân tích.
+    TransactionReport chỉ in kết quả, không can thiệp vào logic phân tích hoặc thao tác dữ liệu.
++Lợi ích:
 
-Gắn kết cao giúp các lớp dễ hiểu, dễ sử dụng và tránh việc các phương thức hoặc thuộc tính không liên quan xuất hiện trong một lớp.
+    Gắn kết cao giúp các lớp dễ hiểu, dễ sử dụng và tránh việc các phương thức hoặc thuộc tính không liên quan xuất hiện trong một lớp.
 
 
 3. Coupling
 Coupling yêu cầu giảm thiểu sự phụ thuộc giữa các lớp để tăng khả năng mở rộng và thay đổi mà không ảnh hưởng đến toàn bộ hệ thống.
 
-Giảm độ phụ thuộc:
++Giảm độ phụ thuộc:
 
-Các lớp giao tiếp với nhau qua danh sách Transaction, không chia sẻ trực tiếp logic bên trong.
+    +Các lớp giao tiếp với nhau qua danh sách Transaction, không chia sẻ trực tiếp logic bên trong.
+    
 Ví dụ:
-TransactionParser chỉ trả về danh sách Transaction và không quan tâm cách danh sách đó được phân tích hoặc hiển thị.
-TransactionAnalyzer và TransactionReport hoạt động độc lập, chỉ nhận dữ liệu đầu vào cần thiết.
-Các phương thức static (static) trong TransactionParser và TransactionAnalyzer đảm bảo không cần phải khởi tạo đối tượng, giảm sự phụ thuộc lẫn nhau giữa các lớp.
-Lợi ích:
 
-Dễ dàng thay thế hoặc sửa đổi logic của một lớp mà không ảnh hưởng đến các lớp khác.
-Ví dụ: Nếu cần thay đổi nguồn dữ liệu (từ CSV sang JSON), chỉ cần cập nhật TransactionParser.
+    +TransactionParser chỉ trả về danh sách Transaction và không quan tâm cách danh sách đó được phân tích hoặc hiển thị.
+    +TransactionAnalyzer và TransactionReport hoạt động độc lập, chỉ nhận dữ liệu đầu vào cần thiết.
+    
+    +Các phương thức static (static) trong TransactionParser và TransactionAnalyzer đảm bảo không cần phải khởi tạo đối tượng, giảm sự phụ thuộc lẫn nhau giữa các lớp.
+
++Lợi ích:
+
+    +Dễ dàng thay thế hoặc sửa đổi logic của một lớp mà không ảnh hưởng đến các lớp khác.
+    +Ví dụ: Nếu cần thay đổi nguồn dữ liệu (từ CSV sang JSON), chỉ cần cập nhật TransactionParser.
 
