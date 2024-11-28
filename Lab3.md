@@ -51,8 +51,9 @@ Mô tả giao tiếp
 - PayrollController -> IProjectDatabase (Yêu cầu thông tin dự án)
 - #### IProjectDatabase -> ProjectManagementDatabase (Truy vấn dữ liệu)
 - #### ProjectManagementDatabase -> ProjectData (Trả về thông tin dự án)
-     Biểu đồ ngữ cảnh của hệ thống con ProjectManagementDatabase subsystems    
-![PlantText](https://www.planttext.com/api/plantuml/png/Z95F3i5G48VtSuhnLYnSm4883H94YWECTZIbVUMzqQGH9xDm95TGKV-JChl9z_jzivZpyTIoGaPsSGGLdvUXPdITpgmzxWqTz2Ao5c13tfe2HZKnoOezmH7fV8zP2tP9Q46M5Uu1ytcMozDaiU1FVAU5wZO1In6yuchj1LbA-PiTu00meSmaKJJDh72CzNgpv5e3bSlR7LkvXt2Wbuc2juhvRPblV19-IAv8GT_zk--oc93JJmEqMFlvWou0003__mC0)
+  
+      Biểu đồ ngữ cảnh của hệ thống con ProjectManagementDatabase subsystems    
+![PlanText](https://www.planttext.com/api/plantuml/png/f5AzJiCm4Dxz5ASoq0vHzwgoAW5392fLT6Ay9jVKoB63VG4YuCaOU2HU0Rj98qiPkztvFdr_yj_FxyOpEcvhBMxXpXfsLej2e_Smss4NDZsyQd8pG0-JLrYlYtwH4Zu5m789hosvRkVi2nLyZuppXVWMGI4tJEw81GbrcI1FS0Vq5FX6sC1O4G-Wt1pjl1dc4bQmPwTCjGXJGjEBxTk3xpnJ7KyVtHYhnstHO4KrcL6uZxTDVFYHeOaCmStDewfE_4nQs_Shh3qOLdnnb5o39frFKaRO4sbaPOq_gSQBQVDP9gVrhSxjA_9GHiOtXM9QyLUM9L55aZfofdutPChuFVu1003__mC0 "ProjectManagementDatabase")
 
 
 
@@ -104,5 +105,4 @@ Mô tả giao tiếp
 
 # 4. Architectural layers and their dependencies
 
-![PlantText](https://www.planttext.com/api/plantuml/png/R59BQiCm4Dth54Fs8VikIam_YI41az1LoMAGXrH4bined61AJzP5ZzGhL8qLQhlMRdWVlJVCz-VNCWYoD9LLDUeJ7WbcMLrRer6CTm4ss1BFu5r1VAzFLMrzImIP5dCsOYWSEcIzswABSavpWIrxQ_Tj4AeEwaFz-MzDMLgw8DF8VK-wOIDjibYzvF3CMD75ysbeiIS-6ptM5soS92XvxAZsBB0YHupY-MepMGFcy_jU1BY3hCWNMIDlv2IjG_LgTlnXnYYAyuvSIJ7AKOssCF55j5zaMbC8yE2THBBg4QxyGQkekNNFtTdVOerYJEeUKH3Mw4hRHHl0LyM_PKLL6WWwCAXbRFTxBZy0003__mC0)
-
+![PlantText]()
