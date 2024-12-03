@@ -78,7 +78,7 @@ Tương tác chính:
 
 
 
-
+##
 
 # 3. Class Diagram (Sơ đồ lớp)
 Các lớp chính:
