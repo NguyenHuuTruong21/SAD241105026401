@@ -75,3 +75,24 @@ Tương tác chính:
   
 3. Khả năng duy trì
 + Tách biệt các lớp giao diện (Form), điều khiển (Controller), và thực thể (Entity) để dễ bảo trì và nâng cấp.
+
+
+
+
+
+# 3. Class Diagram (Sơ đồ lớp)
+Các lớp chính:
+
++ User: Lớp chứa thông tin người dùng.
++ Timecard: Lớp đại diện bảng chấm công.
++ Employee: Thông tin nhân viên.
++ Paycheck: Thông tin phiếu lương.
++ BankSystem: Hệ thống xử lý thanh toán.
+
+Quan hệ giữa các lớp:
++ Employee sở hữu Timecard.
++ PayrollController xử lý tính toán và tương tác với Paycheck.
++ Paycheck kết nối với BankSystem để thực hiện thanh toán.
+
+  
+![PlantText](https://www.planttext.com/api/plantuml/png/V9AnJiCm48PtFuNLgGmTM3DLI0niIALYliRND8hjY-uSgWZnP0my4g-0ayOceHLURFtw_-_kR7z_Vcqb08VEMLLQ4D5xGTRlIW-hYsSF3WijWMjVNTGssix4PgbQgcg_lYlqWSYg3pNXNcg79R19I7IjfHxnASPh7oxYYJgML-86etgq19FUjGO29iG0VwFQ_C8V9zY_yEi112nmlwXKOTYDwb3aekSgpz2N9ooRL0KSTJxyYNlas6goNhVw0BxPzHBG9KpBLA98Z3ZqORsWpkBZUwpkLtgp6RTyeOMcinULx-2s9pvK8vgyobFCV3bRv0cCFXBVDCycA5BpqNxerHQz6JxG3m000F__0m00)
