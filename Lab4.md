@@ -38,3 +38,40 @@ Tương tác chính:
 + Boundary: TimecardForm.
 + Controller: TimecardController.
 + Entity: Timecard.
+
+
+# 3. Use Case: Chạy bảng lương (Run Payroll)
+
+Mô tả:
+Tính toán và xử lý bảng lương dựa trên bảng chấm công và thông tin nhân viên.
+
+Các bước thực hiện
++Người dùng khởi chạy quy trình tính lương.
++Hệ thống thu thập thông tin bảng chấm công và thông tin nhân viên.
++ Tính lương dựa trên các quy tắc (lương theo giờ, lương cố định, hoa hồng, v.v.).
++ Gửi lệnh thanh toán đến hệ thống ngân hàng.
++ In phiếu lương và lưu thông tin.
+
+Lý do thiết kế:
++ Đây là chức năng cốt lõi, đảm bảo hệ thống tự động hóa quy trình phức tạp.
++ Đáp ứng các yêu cầu tích hợp với hệ thống ngân hàng và lưu trữ bảo mật.
+
+Tương tác chính:
++ Actor: Quản lý nhân sự.
++ Boundary: PayrollForm.
++ Controller: PayrollController.
++ Entities: Timecard, Paycheck, Employee, BankSystem.
+
+
+# 4. Phân tích thiết kế
+
+1. Tính bảo mật
++ Ca sử dụng đăng nhập tập trung vào xác thực người dùng, giảm thiểu rủi ro truy cập trái phép.
++ Các dữ liệu nhạy cảm như bảng chấm công, thông tin lương, thông tin tài khoản ngân hàng được bảo vệ.
+  
+2. Tính mở rộng
++ Timecard và Payroll được thiết kế linh hoạt để mở rộng thêm các loại nhân viên (hợp đồng, thời vụ).
++ Hệ thống có thể tích hợp thêm các chức năng như gửi thông báo hoặc quản lý phúc lợi.
+  
+3. Khả năng duy trì
++ Tách biệt các lớp giao diện (Form), điều khiển (Controller), và thực thể (Entity) để dễ bảo trì và nâng cấp.
