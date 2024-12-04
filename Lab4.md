@@ -80,6 +80,95 @@ Tương tác chính:
 
 ##
 
+# 1. Use Case Diagram (Sơ đồ ca sử dụng tổng quát)
+
+Mô tả:
+
+  Sơ đồ ca sử dụng thể hiện các chức năng chính của hệ thống và cách các actor tương tác với các chức năng này.
+
+Sơ đồ:
+
+  Actors:
+
+  + Người dùng (Nhân viên, Quản lý, Admin)
+  + Hệ thống ngân hàng
+  + Máy in phiếu lương
+    
+  Use Cases:
+
+  + Đăng nhập (Login)
+  + Duy trì bảng chấm công (Maintain Timecard)
+  + Chạy bảng lương (Run Payroll)
+
+![PlantText](https://www.planttext.com/api/plantuml/png/T991QiCm44NtEiMGLRt85KfQACsY1ZT9knVoO8dOuoB959-WwzwWQI_GRcDA5eRSmoVe5IhP3Z7OMGZ4_CVyFnhzLOU5iLpR8aiP5pRNy6HGzzVbAkJ44zJ03SmUYsR_HP3Mlq2o_YGmJVKpwz5RJjjrQIncBRjigZUmigdUAG5AF2th3qfEUAGLsRvlMEzAK0GlKZNxGm7fyVkuyoZpKM0-luQhXpnH5B1peBQwAWWYNkeyJKTQo9s3Ex1H6Ggkus3GRa8S333kVOexLbWVhPDk2YkHh1BSOi0cR3hiMU7hmFeYTnShE-I6pXqHwLoWCUSy4ymz4ceNo9U5HB6TfDP8SRj5s6XEngr9vUx5sSBL_UVu1m00__y30000)
+
+# 2. Sequence Diagram (Sơ đồ tuần tự)
+   
+a. Đăng nhập (Login)
+
+Mục tiêu: Hiển thị luồng thực hiện khi người dùng đăng nhập.
+
+Thành phần:
+
+- Actor: Người dùng
+- Objects:
+  + LoginForm: Giao diện để nhập thông tin.
+  + LoginController: Xử lý logic xác thực.
+  + User: Thực thể chứa thông tin người dùng.
+    
+- Luồng tuần tự:
+  + Người dùng nhập tên đăng nhập và mật khẩu vào LoginForm.
+  + LoginForm chuyển thông tin đến LoginController.
+  + LoginController kiểm tra thông tin đăng nhập từ đối tượng User.
+  + Trả về kết quả cho LoginForm.
+  + Hiển thị kết quả trên giao diện.
+
+![PlantText](https://www.planttext.com/api/plantuml/png/T96nYW8n48RxFCMyWDXRY21u1ugLFi0Q5mtkJZIPYDQMLbQs9rVTWOLWjIaiuela2Nm5iowokjmrmypF_Dy_8JTxQMcA59aqOH4dgM2eOyL6qk0uKcleoOd0ZbGfun99oQHGsiMGXDKOIT2wiB6yGgrPsg01_QdFZdCWzujmtLqtE04ifANxWZHq1BCW_1XMsfwCCYYGFhmz2g2fEmS6YGgELGs1yRYd0LtXxIO5Kj7_xhVJts87ocVVCFFPXM1Xydxb3ZoGl3tnlr9VN_-PH-DZUViC7xc3XCJRlQXhmtciDMEj6CVv9zm1003__mC0)
+
+b. Duy trì bảng chấm công (Maintain Timecard)
+
+Mục tiêu: Quản lý thông tin bảng chấm công.
+
+Thành phần:
+
+- Actor: Nhân viên/Quản lý
+= Objects:
+    + TimecardForm: Giao diện nhập liệu.
+    + TimecardController: Xử lý logic.
+    + Timecard: Thực thể lưu thông tin bảng chấm công.
+
+- Luồng tuần tự:
+
+    + Người dùng yêu cầu hiển thị bảng chấm công.
+    + TimecardForm gửi yêu cầu đến TimecardController.
+    + TimecardController lấy dữ liệu từ Timecard.
+    + Hiển thị bảng chấm công trên giao diện.
+    + Người dùng chỉnh sửa và lưu thay đổi.
+    + TimecardForm gửi yêu cầu lưu đến TimecardController.
+    + TimecardController cập nhật dữ liệu vào Timecard.
+
+c. Chạy bảng lương (Run Payroll)
+Mục tiêu: Tự động tính toán và xử lý bảng lương.
+
+Thành phần:
+
+Actor: Quản lý
+Objects:
+PayrollForm: Giao diện chạy bảng lương.
+PayrollController: Xử lý logic tính toán.
+Timecard: Lấy dữ liệu giờ làm việc.
+Employee: Thông tin nhân viên.
+Paycheck: Tính toán và lưu lương.
+BankSystem: Gửi lệnh thanh toán.
+Luồng tuần tự:
+
+Quản lý yêu cầu chạy bảng lương trên PayrollForm.
+PayrollForm chuyển yêu cầu đến PayrollController.
+PayrollController lấy dữ liệu từ Timecard và Employee.
+Tính toán lương, lưu kết quả vào Paycheck.
+Gửi lệnh thanh toán đến BankSystem.
+Hiển thị xác nhận thành công.
+
 # 3. Class Diagram (Sơ đồ lớp)
 Các lớp chính:
 
