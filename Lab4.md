@@ -146,28 +146,34 @@ Thành phần:
     + Người dùng chỉnh sửa và lưu thay đổi.
     + TimecardForm gửi yêu cầu lưu đến TimecardController.
     + TimecardController cập nhật dữ liệu vào Timecard.
+ 
+![PlantText](https://www.planttext.com/api/plantuml/png/d98_IiH05CRxESLt0IzW8GiBQcKL2yliPCW6ve-ydLasjOM5Pn044K5OjB3A51O1xp4dy0g-g9W4ih9Opl1-l_VnyJxYsspbS_B1Q95BxmZdAqLYuO8jSggHLKR9d8fZHqP8Ppqv_Viv_tvh1fJrbU_7XUWqE3WQ2N28Y_OfGARcCM2Z31QfkRSbv38r3mQoVRMb6143Gx-DFISfRYlKlKspeKQHuZDqbU9r41FSmCQEZ4ADJM3G3y4_G-qCb15JUskcC_rqTChybOLVfdWpQTdHxHdFR2zHCduBtTuPhBiayh-Dlh_iKUByQwVjLezQ56AcRD6TrIS0003__mC0)
 
 c. Chạy bảng lương (Run Payroll)
+
 Mục tiêu: Tự động tính toán và xử lý bảng lương.
 
 Thành phần:
 
-Actor: Quản lý
-Objects:
-PayrollForm: Giao diện chạy bảng lương.
-PayrollController: Xử lý logic tính toán.
-Timecard: Lấy dữ liệu giờ làm việc.
-Employee: Thông tin nhân viên.
-Paycheck: Tính toán và lưu lương.
-BankSystem: Gửi lệnh thanh toán.
-Luồng tuần tự:
+- Actor: Quản lý
+- Objects:
+    + PayrollForm: Giao diện chạy bảng lương.
+    + PayrollController: Xử lý logic tính toán.
+    + Timecard: Lấy dữ liệu giờ làm việc.
+    + Employee: Thông tin nhân viên.
+    + Paycheck: Tính toán và lưu lương.
+    + BankSystem: Gửi lệnh thanh toán.
+    
+- Luồng tuần tự:
 
-Quản lý yêu cầu chạy bảng lương trên PayrollForm.
-PayrollForm chuyển yêu cầu đến PayrollController.
-PayrollController lấy dữ liệu từ Timecard và Employee.
-Tính toán lương, lưu kết quả vào Paycheck.
-Gửi lệnh thanh toán đến BankSystem.
-Hiển thị xác nhận thành công.
+    + Quản lý yêu cầu chạy bảng lương trên PayrollForm.
+    + PayrollForm chuyển yêu cầu đến PayrollController.
+    + PayrollController lấy dữ liệu từ Timecard và Employee.
+    + Tính toán lương, lưu kết quả vào Paycheck.
+    + Gửi lệnh thanh toán đến BankSystem.
+    + Hiển thị xác nhận thành công.
+
+![PlantText](https://www.planttext.com/api/plantuml/png/V9A_IWGn4CRxFCMyW2zW8OUYNg4WUerbBXisosKdailAfRQmy1c4MqM4WqCBgrt48d3laIVm5Pn5Shk5PpFX6-RxpH_otNwDvevRLvMQSU6CXV7bEKUUIykcfiACMmyNt5kZzOcn9HC67OcKE_gLciebki9vc1Ib5DncIH-NDzfuAPCcer1Ip98-v3YxydCdIyQslM7lODWLzk4wh2eGiNcbg69JUvZ6vXbpq9ltJOqv6vRtxdu-Ofp6Tbs0xqaBIe0EdpjO0pCHqs84EelDYuSijc-WYzZULv3JyqYePGctNKRypKZ7s3AS2X_Ks1K8gC8JaZkiy6zpkXoP9s6D2fm9DVu_T7_TxVwQnklCYYV4pdQ3-uzfgpiaLsmVO15gGVF6PesWJ5XsUOgAiP74hFjBFm000F__0m00)
 
 # 3. Class Diagram (Sơ đồ lớp)
 Các lớp chính:
