@@ -97,6 +97,29 @@ Thành phần:
 
 ![PlantText](https://www.planttext.com/api/plantuml/png/V9A_IWGn4CRxFCMyW2zW8OUYNg4WUerbBXisosKdailAfRQmy1c4MqM4WqCBgrt48d3laIVm5Pn5Shk5PpFX6-RxpH_otNwDvevRLvMQSU6CXV7bEKUUIykcfiACMmyNt5kZzOcn9HC67OcKE_gLciebki9vc1Ib5DncIH-NDzfuAPCcer1Ip98-v3YxydCdIyQslM7lODWLzk4wh2eGiNcbg69JUvZ6vXbpq9ltJOqv6vRtxdu-Ofp6Tbs0xqaBIe0EdpjO0pCHqs84EelDYuSijc-WYzZULv3JyqYePGctNKRypKZ7s3AS2X_Ks1K8gC8JaZkiy6zpkXoP9s6D2fm9DVu_T7_TxVwQnklCYYV4pdQ3-uzfgpiaLsmVO15gGVF6PesWJ5XsUOgAiP74hFjBFm000F__0m00)
 
+d. In phiếu lương (Print Paychecks)
+
+- Actor tham gia: Payroll Administrator.
+
+Dòng chảy chính
+
+1. Hệ thống tạo tệp phiếu lương.
+2. Gửi lệnh in qua `IPrintService`.
+   
+ + Dòng chảy thay thế
+ 
+- Nếu không tìm thấy máy in, thông báo lỗi và yêu cầu kiểm tra kết nối.
+  
+ + Biểu đồ tuần tự:
+   
+![diargam](https://www.planttext.com/api/plantuml/png/T90n2W8n44Nxd68ku0Ms4CN2Ta4BBMDssGJZH6CYU0AluI8Y20iMLjbYYu3to0cyWgiY1DHouCtxV-PUDxsreThOXIIK6QKXfLkjfEnd2u5afYncL6yXrGBDADSRmNB259gM-Q23zoXpJKYy3PtkDvB0r9yjiE1E5bfcoKLmZGLvkznABCZNmiiIfISm37KbG8PwX_od8gAXyxl4n9SCa0TNuLF1bTyZcE2Eva-3wAu4njnViO2PBnNCssm3AnlSeJMHNexPyvaF0000__y30000)
+
+Lý do thiết kế:
+
+- Việc in phiếu lương cung cấp bằng chứng rõ ràng về các khoản thanh toán cho nhân viên.
+- Sử dụng giao diện `IPrintService` đảm bảo khả năng tương thích với nhiều loại máy in khác nhau.
+- Quản lý lỗi kết nối máy in giúp người dùng nhanh chóng phát hiện và sửa chữa vấn đề.
+
 # 3. Class Diagram (Sơ đồ lớp)
 Các lớp chính:
 
