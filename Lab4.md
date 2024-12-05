@@ -25,6 +25,7 @@ Sơ đồ:
 ![PlantText](https://www.planttext.com/api/plantuml/png/T991QiCm44NtEiMGLRt85KfQACsY1ZT9knVoO8dOuoB959-WwzwWQI_GRcDA5eRSmoVe5IhP3Z7OMGZ4_CVyFnhzLOU5iLpR8aiP5pRNy6HGzzVbAkJ44zJ03SmUYsR_HP3Mlq2o_YGmJVKpwz5RJjjrQIncBRjigZUmigdUAG5AF2th3qfEUAGLsRvlMEzAK0GlKZNxGm7fyVkuyoZpKM0-luQhXpnH5B1peBQwAWWYNkeyJKTQo9s3Ex1H6Ggkus3GRa8S333kVOexLbWVhPDk2YkHh1BSOi0cR3hiMU7hmFeYTnShE-I6pXqHwLoWCUSy4ymz4ceNo9U5HB6TfDP8SRj5s6XEngr9vUx5sSBL_UVu1m00__y30000)
 
 # 2. Sequence Diagram (Sơ đồ tuần tự)
+
    
 1. Đăng nhập (Login)
 
@@ -46,6 +47,7 @@ Thành phần:
   + Hiển thị kết quả trên giao diện.
 
 ![PlantText](https://www.planttext.com/api/plantuml/png/T96nYW8n48RxFCMyWDXRY21u1ugLFi0Q5mtkJZIPYDQMLbQs9rVTWOLWjIaiuela2Nm5iowokjmrmypF_Dy_8JTxQMcA59aqOH4dgM2eOyL6qk0uKcleoOd0ZbGfun99oQHGsiMGXDKOIT2wiB6yGgrPsg01_QdFZdCWzujmtLqtE04ifANxWZHq1BCW_1XMsfwCCYYGFhmz2g2fEmS6YGgELGs1yRYd0LtXxIO5Kj7_xhVJts87ocVVCFFPXM1Xydxb3ZoGl3tnlr9VN_-PH-DZUViC7xc3XCJRlQXhmtciDMEj6CVv9zm1003__mC0)
+
 
 2. Duy trì bảng chấm công (Maintain Timecard)
 
@@ -70,6 +72,7 @@ Thành phần:
     + TimecardController cập nhật dữ liệu vào Timecard.
  
 ![PlantText](https://www.planttext.com/api/plantuml/png/d98_IiH05CRxESLt0IzW8GiBQcKL2yliPCW6ve-ydLasjOM5Pn044K5OjB3A51O1xp4dy0g-g9W4ih9Opl1-l_VnyJxYsspbS_B1Q95BxmZdAqLYuO8jSggHLKR9d8fZHqP8Ppqv_Viv_tvh1fJrbU_7XUWqE3WQ2N28Y_OfGARcCM2Z31QfkRSbv38r3mQoVRMb6143Gx-DFISfRYlKlKspeKQHuZDqbU9r41FSmCQEZ4ADJM3G3y4_G-qCb15JUskcC_rqTChybOLVfdWpQTdHxHdFR2zHCduBtTuPhBiayh-Dlh_iKUByQwVjLezQ56AcRD6TrIS0003__mC0)
+
 
 3. Chạy bảng lương (Run Payroll)
 
@@ -97,7 +100,8 @@ Thành phần:
 
 ![PlantText](https://www.planttext.com/api/plantuml/png/V9A_IWGn4CRxFCMyW2zW8OUYNg4WUerbBXisosKdailAfRQmy1c4MqM4WqCBgrt48d3laIVm5Pn5Shk5PpFX6-RxpH_otNwDvevRLvMQSU6CXV7bEKUUIykcfiACMmyNt5kZzOcn9HC67OcKE_gLciebki9vc1Ib5DncIH-NDzfuAPCcer1Ip98-v3YxydCdIyQslM7lODWLzk4wh2eGiNcbg69JUvZ6vXbpq9ltJOqv6vRtxdu-Ofp6Tbs0xqaBIe0EdpjO0pCHqs84EelDYuSijc-WYzZULv3JyqYePGctNKRypKZ7s3AS2X_Ks1K8gC8JaZkiy6zpkXoP9s6D2fm9DVu_T7_TxVwQnklCYYV4pdQ3-uzfgpiaLsmVO15gGVF6PesWJ5XsUOgAiP74hFjBFm000F__0m00)
 
-# 4. UML cho Quy Trình Tính Lương (Sequence Diagram)
+
+4. UML cho Quy Trình Tính Lương (Sequence Diagram)
 
 Nhân viên (Employee): Gửi yêu cầu lấy thông tin ca làm việc và tính toán lương.
 
@@ -107,6 +111,7 @@ Nhân viên (Employee): Gửi yêu cầu lấy thông tin ca làm việc và tí
 + Sau khi nhận được thông tin lương từ PayrollService, hệ thống trả lại cho nhân viên kết quả bảng lương.
 
 ![PlantText](https://www.planttext.com/api/plantuml/png/Z991YW8n44NtEKNXtWku4455PpTCdw1eImnK9srIKN8s5nx9AzXj9v8MnTc5oiklnoUtotNX1Ps4XfN2Mgo3TTEoZKIgxUQwrYqQWSalHcUPeOfUg9a0-dGSOzL1xmKgSYTTqq3rapJu45dGQPPvbMLWEa_xO0P_T0paPOY67xEtha7HrgY4z72njdkoeOolI52pLoDWd2x1cIAyI7tgpBfxUowXBwh8w28iaUl0_tRTsk2-cpweLzDnaHsSLrDoKI_4kme6wMTZxsfOQTyonXog5cHs_MUw0m00__y30000)
+
 
 5. In phiếu lương (Print Paychecks)
 
