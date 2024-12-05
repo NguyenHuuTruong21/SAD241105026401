@@ -26,7 +26,7 @@ Sơ đồ:
 
 # 2. Sequence Diagram (Sơ đồ tuần tự)
    
-a. Đăng nhập (Login)
+1. Đăng nhập (Login)
 
 Mục tiêu: Hiển thị luồng thực hiện khi người dùng đăng nhập.
 
@@ -47,7 +47,7 @@ Thành phần:
 
 ![PlantText](https://www.planttext.com/api/plantuml/png/T96nYW8n48RxFCMyWDXRY21u1ugLFi0Q5mtkJZIPYDQMLbQs9rVTWOLWjIaiuela2Nm5iowokjmrmypF_Dy_8JTxQMcA59aqOH4dgM2eOyL6qk0uKcleoOd0ZbGfun99oQHGsiMGXDKOIT2wiB6yGgrPsg01_QdFZdCWzujmtLqtE04ifANxWZHq1BCW_1XMsfwCCYYGFhmz2g2fEmS6YGgELGs1yRYd0LtXxIO5Kj7_xhVJts87ocVVCFFPXM1Xydxb3ZoGl3tnlr9VN_-PH-DZUViC7xc3XCJRlQXhmtciDMEj6CVv9zm1003__mC0)
 
-b. Duy trì bảng chấm công (Maintain Timecard)
+2. Duy trì bảng chấm công (Maintain Timecard)
 
 Mục tiêu: Quản lý thông tin bảng chấm công.
 
@@ -71,7 +71,7 @@ Thành phần:
  
 ![PlantText](https://www.planttext.com/api/plantuml/png/d98_IiH05CRxESLt0IzW8GiBQcKL2yliPCW6ve-ydLasjOM5Pn044K5OjB3A51O1xp4dy0g-g9W4ih9Opl1-l_VnyJxYsspbS_B1Q95BxmZdAqLYuO8jSggHLKR9d8fZHqP8Ppqv_Viv_tvh1fJrbU_7XUWqE3WQ2N28Y_OfGARcCM2Z31QfkRSbv38r3mQoVRMb6143Gx-DFISfRYlKlKspeKQHuZDqbU9r41FSmCQEZ4ADJM3G3y4_G-qCb15JUskcC_rqTChybOLVfdWpQTdHxHdFR2zHCduBtTuPhBiayh-Dlh_iKUByQwVjLezQ56AcRD6TrIS0003__mC0)
 
-c. Chạy bảng lương (Run Payroll)
+3. Chạy bảng lương (Run Payroll)
 
 Mục tiêu: Tự động tính toán và xử lý bảng lương.
 
@@ -97,7 +97,18 @@ Thành phần:
 
 ![PlantText](https://www.planttext.com/api/plantuml/png/V9A_IWGn4CRxFCMyW2zW8OUYNg4WUerbBXisosKdailAfRQmy1c4MqM4WqCBgrt48d3laIVm5Pn5Shk5PpFX6-RxpH_otNwDvevRLvMQSU6CXV7bEKUUIykcfiACMmyNt5kZzOcn9HC67OcKE_gLciebki9vc1Ib5DncIH-NDzfuAPCcer1Ip98-v3YxydCdIyQslM7lODWLzk4wh2eGiNcbg69JUvZ6vXbpq9ltJOqv6vRtxdu-Ofp6Tbs0xqaBIe0EdpjO0pCHqs84EelDYuSijc-WYzZULv3JyqYePGctNKRypKZ7s3AS2X_Ks1K8gC8JaZkiy6zpkXoP9s6D2fm9DVu_T7_TxVwQnklCYYV4pdQ3-uzfgpiaLsmVO15gGVF6PesWJ5XsUOgAiP74hFjBFm000F__0m00)
 
-d. In phiếu lương (Print Paychecks)
+# 4. UML cho Quy Trình Tính Lương (Sequence Diagram)
+
+Nhân viên (Employee): Gửi yêu cầu lấy thông tin ca làm việc và tính toán lương.
+
++ Hệ thống Bảng lương (Payroll System):
++ Gửi yêu cầu tới dịch vụ ShiftService để lấy thông tin ca làm việc.
++ Sau khi nhận thông tin ca làm việc, hệ thống tiếp tục tính toán lương và gửi yêu cầu tới PayrollService để tính toán bảng lương.
++ Sau khi nhận được thông tin lương từ PayrollService, hệ thống trả lại cho nhân viên kết quả bảng lương.
+
+![PlantText](https://www.planttext.com/api/plantuml/png/Z991YW8n44NtEKNXtWku4455PpTCdw1eImnK9srIKN8s5nx9AzXj9v8MnTc5oiklnoUtotNX1Ps4XfN2Mgo3TTEoZKIgxUQwrYqQWSalHcUPeOfUg9a0-dGSOzL1xmKgSYTTqq3rapJu45dGQPPvbMLWEa_xO0P_T0paPOY67xEtha7HrgY4z72njdkoeOolI52pLoDWd2x1cIAyI7tgpBfxUowXBwh8w28iaUl0_tRTsk2-cpweLzDnaHsSLrDoKI_4kme6wMTZxsfOQTyonXog5cHs_MUw0m00__y30000)
+
+5. In phiếu lương (Print Paychecks)
 
 - Actor tham gia: Payroll Administrator.
 
@@ -120,19 +131,37 @@ Lý do thiết kế:
 - Sử dụng giao diện `IPrintService` đảm bảo khả năng tương thích với nhiều loại máy in khác nhau.
 - Quản lý lỗi kết nối máy in giúp người dùng nhanh chóng phát hiện và sửa chữa vấn đề.
 
-# 3. Class Diagram (Sơ đồ lớp)
-Các lớp chính:
+##
 
-+ User: Lớp chứa thông tin người dùng.
-+ Timecard: Lớp đại diện bảng chấm công.
-+ Employee: Thông tin nhân viên.
-+ Paycheck: Thông tin phiếu lương.
-+ BankSystem: Hệ thống xử lý thanh toán.
+# II. Giải thích tổng hợp các ca sử dụng
 
-Quan hệ giữa các lớp:
-+ Employee sở hữu Timecard.
-+ PayrollController xử lý tính toán và tương tác với Paycheck.
-+ Paycheck kết nối với BankSystem để thực hiện thanh toán.
+Lý do thiết kế hệ thống
 
+- Tính toàn vẹn dữ liệu
   
-![PlantText](https://www.planttext.com/api/plantuml/png/V9AnJiCm48PtFuNLgGmTM3DLI0niIALYliRND8hjY-uSgWZnP0my4g-0ayOceHLURFtw_-_kR7z_Vcqb08VEMLLQ4D5xGTRlIW-hYsSF3WijWMjVNTGssix4PgbQgcg_lYlqWSYg3pNXNcg79R19I7IjfHxnASPh7oxYYJgML-86etgq19FUjGO29iG0VwFQ_C8V9zY_yEi112nmlwXKOTYDwb3aekSgpz2N9ooRL0KSTJxyYNlas6goNhVw0BxPzHBG9KpBLA98Z3ZqORsWpkBZUwpkLtgp6RTyeOMcinULx-2s9pvK8vgyobFCV3bRv0cCFXBVDCycA5BpqNxerHQz6JxG3m000F__0m00)
+    - Mỗi ca sử dụng đều bao gồm bước xác thực và kiểm tra tính hợp lệ, đảm bảo dữ liệu được xử lý chính xác.
+    
+- Đơn giản hóa quy trình
+  
+    - Thiết kế từng ca sử dụng tương ứng với các chức năng cụ thể trong tài liệu.
+    
+- Tăng khả năng tái sử dụng
+  
+    - Các phân hệ (Subsystem) như `BankSystem`, `PrintService` được thiết kế thành các giao diện độc lập, dễ dàng tái sử dụng trong các hệ thống khác.
+    
+- Đáp ứng yêu cầu người dùng
+  
+    - Căn cứ trên tài liệu, các ca sử dụng đã bao phủ toàn bộ quy trình hoạt động của hệ thống tính lương.
+    - Mỗi ca sử dụng được thiết kế để giải quyết các yêu cầu của người dùng cuối (như nhân viên, quản lý nhân sự, kế toán) và đảm bảo hệ thống hoạt động như mong muốn.
+    - Hệ thống được thiết kế sao cho có thể mở rộng khi cần thêm các ca sử dụng mới.
+
+- Hỗ trợ các yêu cầu pháp lý và bảo mật
+
+    - Hệ thống cần hỗ trợ các yêu cầu pháp lý về số giờ làm việc tối đa, phụ cấp và nghỉ phép.
+    - Hệ thống Payroll phải bảo vệ thông tin cá nhân và tài chính của nhân viên bằng các biện pháp bảo mật như mã hóa dữ liệu, kiểm tra quyền truy cập, và sao lưu thường xuyên.
+
+- Tối ưu hiệu suất hệ thống
+
+    - Với các ca làm việc phức tạp (ca gãy, ca linh hoạt, làm thêm giờ), hệ thống cần có khả năng xử lý nhanh chóng và chính xác, tránh gây trì hoãn trong việc trả lương cho nhân viên.
+    - Hệ thống cần hỗ trợ nhiều loại ca làm việc và tính năng mở rộng như tính lương cho ca làm việc linh hoạt hoặc theo dõi ngày nghỉ phép.
+
