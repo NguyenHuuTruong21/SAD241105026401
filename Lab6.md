@@ -1,7 +1,7 @@
 # Thiết kế các lớp trong hệ thống Payroll System
 
 
-I. BankSystem Subsystem
+# I. BankSystem Subsystem
 
   Các lớp và phương thức:
 
@@ -38,53 +38,74 @@ Quan hệ:
   + BankTransaction được liên kết với BankInformation và Paycheck.
 
 
-2. PrintService Subsystem
-Các lớp và phương thức:
+# II. PrintService Subsystem
 
-PrintService
+  Các lớp và phương thức:
 
-Phương thức:
-print(aPaycheck: Paycheck, onPrinter: String)
-Chức năng: In phiếu lương dựa trên thông tin đã cung cấp.
-PaycheckPrinterImage
+  1. PrintService
 
-Phương thức:
-create(fromPaycheck: Paycheck)
-buildPrintImage()
-Chức năng: Tạo hình ảnh phiếu lương dựa trên thông tin từ phiếu lương.
-PrinterInterface
+  + Phương thức:
+    
+    + print(aPaycheck: Paycheck, onPrinter: String)
+      
+  + Chức năng: In phiếu lương dựa trên thông tin đã cung cấp.
 
-Phương thức:
-print(theImage)
-Chức năng: Quản lý giao diện kết nối với máy in.
-Quan hệ:
+  2. PaycheckPrinterImage
 
-PrintService phụ thuộc vào PrinterInterface để giao tiếp với các máy in.
-PaycheckPrinterImage được sử dụng để tạo hình ảnh phiếu lương.
-3. ProjectManagementDatabase Subsystem
-Các lớp và phương thức:
+  + Phương thức:
+    
+    + create(fromPaycheck: Paycheck)
+    + buildPrintImage()
+      
+  + Chức năng: Tạo hình ảnh phiếu lương dựa trên thông tin từ phiếu lương.
 
-ProjectManagementDatabase
+  3. PrinterInterface
 
-Phương thức:
-getChargeNumbers(criteria: String): ChargeNumList
-initialize()
-Chức năng: Truy xuất và khởi tạo cơ sở dữ liệu quản lý dự án.
-ChargeNumList
+  + Phương thức:
 
-Phương thức:
-new()
-add(theChargeNum: ChargeNum)
-Chức năng: Lưu trữ danh sách các mã dự án đã truy xuất.
-ChargeNum
+    + print(theImage)
+    + Chức năng: Quản lý giao diện kết nối với máy in.
 
-Thuộc tính:
-projectName: String
-value: String
-Phương thức:
-new(projectName: String, value: String)
-Chức năng: Lưu thông tin chi tiết của từng mã dự án.
-Quan hệ:
+  Quan hệ:
 
-ProjectManagementDatabase sử dụng DBChargeNumbers để truy xuất mã dự án.
-ChargeNumList chứa danh sách các đối tượng ChargeNum.
+  + PrintService phụ thuộc vào PrinterInterface để giao tiếp với các máy in.
+  + PaycheckPrinterImage được sử dụng để tạo hình ảnh phiếu lương.
+
+
+# III. ProjectManagementDatabase Subsystem
+
+  Các lớp và phương thức:
+
+  1. ProjectManagementDatabase
+
+  + Phương thức:
+    
+    + getChargeNumbers(criteria: String): ChargeNumList
+    + initialize()
+
+  + Chức năng: Truy xuất và khởi tạo cơ sở dữ liệu quản lý dự án.
+
+  2. ChargeNumList
+
+  + Phương thức:
+
+    + new()
+    + add(theChargeNum: ChargeNum)
+
+  + Chức năng: Lưu trữ danh sách các mã dự án đã truy xuất.
+  
+  3. ChargeNum
+
+  + Thuộc tính:
+
+    + projectName: String
+    + value: String
+
+  + Phương thức:
+    + new(projectName: String, value: String)
+    + Chức năng: Lưu thông tin chi tiết của từng mã dự án.
+
+  + Quan hệ:
+
+    + ProjectManagementDatabase sử dụng DBChargeNumbers để truy xuất mã dự án.
+    + ChargeNumList chứa danh sách các đối tượng ChargeNum.
